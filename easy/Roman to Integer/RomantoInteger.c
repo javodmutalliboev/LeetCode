@@ -43,74 +43,56 @@ int romanToInt(char *s)
     {
         size++;
     }
-    int first;
-    int second;
-    int last_index;
-    if (size == 1) {
+    int prev_value = 0;
+    if (size == 1)
+    {
         function(s[0], &total);
         return total;
     }
-    for (i = 0; i < size - 1;)
+    for (i = 0; i < size; i++)
     {
-        function(s[i], &first);
-        last_index = i + 1;
-        function(s[last_index], &second);
-        if (first >= second)
+        int value;
+        function(s[i], &value);
+        if (value > prev_value)
         {
-            printf("(first) %d + ", first);
-            total += first;
-            i++;
-            if (i >= size - 1)
-            {
-                printf(" %d >= %d   ", i, size - 1);
-            }
+            printf("((value) %d - %d) + ", value, 2 * prev_value);
+            total += value - 2 * prev_value;
         }
-        else if (first < second)
+        else
         {
-            printf("(s - f) %d + ", second - first);
-            total += second - first;
-            i += 2;
-            if (i >= size - 1)
-            {
-                printf(" %d >= %d   ", i, size - 1);
-            }
+            printf("(value) %d + ", value);
+            total += value;
         }
-        if (i == size - 1)
-        {
-            printf(" %d == %d   ", i, size - 1);
-            int last;
-            function(s[i], &last);
-            total += last;
-        }
+        prev_value = value;
     }
 
     return total;
 }
 
-int function(char rome_digit, int *first)
+int function(char rome_digit, int *value)
 {
     switch (rome_digit)
     {
     case 'I':
-        *first = I;
+        *value = I;
         break;
     case 'V':
-        *first = V;
+        *value = V;
         break;
     case 'X':
-        *first = X;
+        *value = X;
         break;
     case 'L':
-        *first = L;
+        *value = L;
         break;
     case 'C':
-        *first = C;
+        *value = C;
         break;
     case 'D':
-        *first = D;
+        *value = D;
         break;
     case 'M':
-        *first = M;
+        *value = M;
         break;
     default:
         printf("Invalid character: %c\n", rome_digit);
