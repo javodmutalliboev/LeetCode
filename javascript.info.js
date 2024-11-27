@@ -35,4 +35,6 @@ let currentUserName = "John";
 const BIRTHDAY = "18.04.1982";
 
 const age = someCode(BIRTHDAY);
+
+const BIGINT = 1234567890123456789012345678901234567890n;
 */
