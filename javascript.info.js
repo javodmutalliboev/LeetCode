@@ -38,3 +38,6 @@ const age = someCode(BIRTHDAY);
 
 const BIGINT = 1234567890123456789012345678901234567890n;
 */
+
+let name = prompt("What is your name?", "");
+alert(name);
