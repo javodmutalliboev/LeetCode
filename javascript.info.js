@@ -94,4 +94,36 @@ login == "Employee"
 ? "No login"
 : "";
 
+
+
+if (age >= 14 && age <= 90) {
+    }
+    
+    let age = 10;
+    
+    if (age < 14 || age > 90) {
+    }
+    
+    if (!(age >= 14 && age <= 90)) {
+    }
+    
+    const user = prompt("Who's there?", "");
+    if (user) {
+        if (user === "Admin") {
+    const password = prompt("Password?", "");
+    if (password) {
+        if (password === "TheMaster") {
+            alert("Welcome!");
+        } else {
+            alert("Wrong Password");
+    }
+} else {
+    alert("Canceled");
+}
+} else {
+    alert("I don't know you");
+}
+} else {
+    alert("Canceled");
+}
 */
