@@ -214,4 +214,9 @@ ask(
   () => alert("You agreed."),
   () => alert("You canceled the execution.")
 );
+
+
+let num = (1, 2);
+alert(num);
+
 */
