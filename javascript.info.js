@@ -126,6 +126,22 @@ if (age >= 14 && age <= 90) {
 } else {
     alert("Canceled");
 }
-*/
 
 // nullish coalescing read
+
+// prime number
+
+const n = +prompt("Enter value for n", "");
+nextPrime: for (let i = 2; i <= n; i++) {
+    //   let divider_count = 0;
+    for (let j = 2; j < i; j++) {
+        if (i % j == 0) {
+            continue nextPrime;
+        }
+    }
+    //   if (divider_count == 2) {
+        alert(i + ": prime number");
+        //   }
+    }
+    
+*/
