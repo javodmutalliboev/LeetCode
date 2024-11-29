@@ -200,6 +200,18 @@ function pow(x, n) {
 
 alert(pow(3, 2));
 
-*/
+
 
 // function expressions read
+
+function ask(question, yes, no) {
+  if (confirm(question)) yes();
+  else no();
+}
+
+ask(
+  "Do you agree?",
+  () => alert("You agreed."),
+  () => alert("You canceled the execution.")
+);
+*/
