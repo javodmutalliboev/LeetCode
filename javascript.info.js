@@ -176,4 +176,26 @@ switch (a) {
   default:
     break;
 }
+
+
+function checkAge(age) {
+  //   return age > 18 || confirm("Did parents allow you?");
+  return age > 18 ? true : confirm("Did parents allow you?");
+}
+
+
+function min(a, b) {
+  return a < b ? a : b;
+}
 */
+
+function pow(x, n) {
+  let result = 1;
+  while (n) {
+    result *= x;
+    n--;
+  }
+  return result;
+}
+
+alert(pow(3, 2));
