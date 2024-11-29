@@ -187,7 +187,7 @@ function checkAge(age) {
 function min(a, b) {
   return a < b ? a : b;
 }
-*/
+
 
 function pow(x, n) {
   let result = 1;
@@ -199,3 +199,7 @@ function pow(x, n) {
 }
 
 alert(pow(3, 2));
+
+*/
+
+// function expressions read
