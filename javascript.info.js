@@ -500,3 +500,120 @@ str.test = 5;
 
 alert(str.test);
 */
+
+/*
+const a = +prompt("a?");
+const b = +prompt("b?");
+
+alert(a + b);
+*/
+
+/*
+alert(Math.round(6.35 * 10) / 10);
+*/
+
+/*
+function readNumber() {
+  let num;
+  
+  do {
+    num = prompt("Enter a number", 0);
+  } while (!isFinite(num));
+  
+  if (num === null || num === "") return null;
+  
+  return +num;
+}
+
+alert(`Read: ${readNumber()}`);
+*/
+
+/*
+function random(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
+alert(random(1, 5));
+alert(random(1, 5));
+alert(random(1, 5));
+*/
+
+/*
+const styles = ["Jazz", "Blues"];
+styles.push("Rock-n-Roll");
+styles[Math.floor((styles.length - 1) / 2)] = "Classics";
+alert(styles.shift());
+styles.unshift("Rap", "Reggae");
+alert(styles);
+*/
+/*
+let arr = ["a", "b"];
+
+arr.push(function () {
+  alert(this);
+});
+
+arr[2]();
+*/
+
+/*
+function sumInput() {
+  const arr = [];
+  
+  let num;
+  do {
+    num = prompt("Enter a value?", 0);
+    if (isFinite(num)) {
+      arr.push(+num);
+    }
+  } while (num !== "" && num !== null && isFinite(num));
+  
+  let sum = 0;
+  for (let num of arr) {
+    sum += num;
+  }
+  
+  return sum;
+}
+
+alert(sumInput());
+*/
+
+/**
+ * @param {Array<number>} arr
+ * @returns {number}
+ 
+function getMaxSubSum(arr) {
+  
+  let max = 0;
+  for (let i = 0; i < arr.length; i++) {
+    let sum = 0;
+    for (let j = i; j < arr.length; j++) {
+      sum += arr[j];
+      if (sum > max) {
+        max = sum;
+      }
+    }
+  }
+  
+  let max = 0;
+  let partialSum = 0;
+  
+  for (let item of arr) {
+    partialSum += item;
+    max = Math.max(max, partialSum);
+    if (partialSum < 0) partialSum = 0;
+  }
+  
+  return max;
+}
+
+alert(getMaxSubSum([-1, 2, 3, -9]));
+alert(getMaxSubSum([2, -1, 2, 3, -9]));
+alert(getMaxSubSum([-1, 2, 3, -9, 11]));
+alert(getMaxSubSum([-2, -1, 1, 2]));
+alert(getMaxSubSum([100, -9, 2, -3, 5]));
+alert(getMaxSubSum([1, 2, 3]));
+alert(getMaxSubSum([-1, -2, -3]));
+
+*/
