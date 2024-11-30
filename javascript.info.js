@@ -476,3 +476,19 @@ alert(obj?.["full name"]);
 
 obj.greet?.();
 */
+
+/*
+let obj = {
+  name: "John",
+  money: 1000,
+  
+  [Symbol.toPrimitive](hint) {
+    alert(`hint: ${hint}`);
+    return hint === "string" ? `{name: "${this.name}"}` : this.money;
+  },
+};
+
+alert(obj);
+alert(+obj);
+alert(obj + 500);
+*/
