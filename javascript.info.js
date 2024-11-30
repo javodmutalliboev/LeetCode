@@ -466,3 +466,13 @@ accumulator.read();
 
 alert(accumulator.value);
 */
+
+/*
+let obj = {
+  "full name": "Javod Mutalliboev",
+};
+
+alert(obj?.["full name"]);
+
+obj.greet?.();
+*/
