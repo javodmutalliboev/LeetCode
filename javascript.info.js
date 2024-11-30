@@ -492,3 +492,11 @@ alert(obj);
 alert(+obj);
 alert(obj + 500);
 */
+
+/*
+let str = "Hello";
+
+str.test = 5;
+
+alert(str.test);
+*/
