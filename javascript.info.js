@@ -617,3 +617,374 @@ alert(getMaxSubSum([1, 2, 3]));
 alert(getMaxSubSum([-1, -2, -3]));
 
 */
+
+/*
+/**
+ *
+ * @param {String} str
+ * @returns {String}
+
+function camelize(str) {
+  const result = str
+  .split("-")
+  .map((word, i) => (i == 0 ? word : word[0].toUpperCase() + word.slice(1)))
+  .join("");
+  
+  return result;
+}
+
+alert(camelize("background-color"));
+alert(camelize("list-style-image"));
+alert(camelize("-webkit-transition"));
+
+*/
+
+/*
+/**
+ *
+ * @param {Array<number>} arr
+ * @param {number} a
+ * @param {number} b
+ * @returns {Array<number>}
+
+function filterRange(arr, a, b) {
+  const result = arr.filter((num) => num >= a && num <= b);
+  return result;
+}
+let arr = [5, 3, 8, 1];
+
+let filtered = filterRange(arr, 1, 4);
+
+alert(filtered); // 3,1 (matching values)
+
+alert(arr); // 5,3,8,1 (not modified)
+*/
+
+/*
+/**
+ *
+ * @param {Array<number} arr
+ * @param {number} a
+ * @param {number} b
+
+function filterRangeInPlace(arr, a, b) {
+  for (let i = 0; i < arr.length; i++) {
+    let val = arr[i];
+    
+    if (val < a || val > b) {
+      arr.splice(i, 1);
+      i--;
+    }
+  }
+}
+
+let arr = [5, 3, 8, 1];
+
+filterRangeInPlace(arr, 1, 4); // removed the numbers except from 1 to 4
+
+alert(arr); // [3, 1]
+*/
+
+/*
+let arr = [5, 2, 1, -10, 8];
+
+// ... your code to sort it in decreasing order
+arr.sort((a, b) => b - a);
+
+alert(arr); // 8, 5, 2, 1, -10
+*/
+
+/*
+/**
+ *
+ * @param {Array<string>} arr
+ * @returns {Array<string>}
+
+function copySorted(arr) {
+  return arr.slice().sort();
+}
+
+let arr = ["HTML", "JavaScript", "CSS"];
+
+let sorted = copySorted(arr);
+
+alert(sorted); // CSS, HTML, JavaScript
+alert(arr); // HTML, JavaScript, CSS (no changes)
+
+*/
+
+/*
+function Calculator() {
+  /**
+   *
+   * @param {string} name
+   * @param {Function} func
+  
+ this.addMethod = function (name, func) {
+   this[name] = func;
+  };
+  
+  /**
+   *
+   * @param {string} str
+   * @returns {number}
+  
+ this.calculate = function (str) {
+   const arr = str.split(" ");
+   const methodName = Object.getOwnPropertyNames(this).find(
+     (name) => name === arr[1]
+    );
+    return this[methodName]?.(arr[0], arr[2]);
+  };
+}
+
+let powerCalc = new Calculator();
+powerCalc.addMethod("*", (a, b) => a * b);
+powerCalc.addMethod("/", (a, b) => a / b);
+powerCalc.addMethod("**", (a, b) => a ** b);
+
+let result = powerCalc.calculate("2 ** 3");
+alert(result); // 8
+
+*/
+
+/*
+let john = { name: "John", age: 25 };
+let pete = { name: "Pete", age: 30 };
+let mary = { name: "Mary", age: 28 };
+
+let users = [john, pete, mary];
+
+let names = users.map((user) => user.name); /* ... your code 
+
+alert(names); // John, Pete, Mary
+*/
+
+/*
+let john = { name: "John", surname: "Smith", id: 1 };
+let pete = { name: "Pete", surname: "Hunt", id: 2 };
+let mary = { name: "Mary", surname: "Key", id: 3 };
+
+let users = [john, pete, mary];
+
+let usersMapped = users.map((user) => ({
+  id: user.id,
+  fullName: user.name + " " + user.surname,
+})); /* ... your code ... 
+
+/*
+usersMapped = [
+  { fullName: "John Smith", id: 1 },
+  { fullName: "Pete Hunt", id: 2 },
+  { fullName: "Mary Key", id: 3 }
+]
+
+
+alert(usersMapped[0].id); // 1
+alert(usersMapped[0].fullName); // John Smith
+
+*/
+
+/*
+
+/**
+ *
+ * @param {Array<*>} users
+
+function sortByAge(users) {
+  users.sort((user1, user2) => user1.age - user2.age);
+}
+
+let john = { name: "John", age: 25 };
+let pete = { name: "Pete", age: 30 };
+let mary = { name: "Mary", age: 28 };
+
+let arr = [pete, john, mary];
+
+sortByAge(arr);
+
+// now: [john, mary, pete]
+alert(arr[0].name); // John
+alert(arr[1].name); // Mary
+alert(arr[2].name); // Pete
+
+*/
+
+/*
+
+/**
+ *
+ * @param {Array<number>} array
+ 
+function shuffle(array) {
+  array.sort(() => Math.random() - 0.5);
+}
+
+let arr = [1, 2, 3];
+
+shuffle(arr);
+alert(arr);
+// arr = [3, 2, 1]
+
+shuffle(arr);
+alert(arr);
+// arr = [2, 1, 3]
+
+shuffle(arr);
+alert(arr);
+// arr = [3, 1, 2]
+// ...
+
+*/
+
+/*
+function shuffle(array) {
+  array.sort(() => Math.random() - 0.5);
+}
+
+// counts of appearances for all possible permutations
+let count = {
+  123: 0,
+  132: 0,
+  213: 0,
+  231: 0,
+  321: 0,
+  312: 0,
+};
+
+for (let i = 0; i < 1000000; i++) {
+  let array = [1, 2, 3];
+  shuffle(array);
+  count[array.join("")]++;
+}
+
+// show counts of all possible permutations
+for (let key in count) {
+  alert(`${key}: ${count[key]}`);
+}
+
+*/
+
+/*
+
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+// counts of appearances for all possible permutations
+let count = {
+  123: 0,
+  132: 0,
+  213: 0,
+  231: 0,
+  321: 0,
+  312: 0,
+};
+
+for (let i = 0; i < 1000000; i++) {
+  let array = [1, 2, 3];
+  shuffle(array);
+  count[array.join("")]++;
+}
+
+// show counts of all possible permutations
+for (let key in count) {
+  alert(`${key}: ${count[key]}`);
+}
+
+*/
+
+/*
+/**
+ *
+ * @param {Array<*>} users
+ * @returns {number}
+
+function getAverageAge(users) {
+  return users.reduce((prev, user) => prev + user.age, 0) / users.length;
+}
+
+let john = { name: "John", age: 25 };
+let pete = { name: "Pete", age: 30 };
+let mary = { name: "Mary", age: 29 };
+
+let arr = [john, pete, mary];
+
+alert(getAverageAge(arr)); // (25 + 30 + 29) / 3 = 28
+*/
+
+/*
+
+/**
+ *
+ * @param {Array<string>} arr
+ * @returns {Array<string>}
+
+function unique(arr) {
+  /* your code 
+  let result = [];
+  
+  for (let str of arr) {
+    if (!result.includes(str)) {
+      result.push(str);
+    }
+  }
+
+  return result;
+}
+
+let strings = [
+  "Hare",
+  "Krishna",
+  "Hare",
+  "Krishna",
+  "Krishna",
+  "Krishna",
+  "Hare",
+  "Hare",
+  ":-O",
+];
+
+alert(unique(strings)); // Hare, Krishna, :-O
+
+*/
+
+/*
+/**
+ *
+ * @param {Array<*>} arr
+ 
+function groupById(arr) {
+  const result = {};
+  
+  arr.reduce((prev, cur) => {
+    prev[cur.id] = cur;
+    return prev;
+  }, result);
+  
+  return result;
+}
+
+let users = [
+  { id: "john", name: "John Smith", age: 20 },
+  { id: "ann", name: "Ann Smith", age: 24 },
+  { id: "pete", name: "Pete Peterson", age: 31 },
+];
+
+let usersById = groupById(users);
+
+console.dir(usersById.ann.age);
+
+/*
+// after the call we should have:
+
+usersById = {
+  john: {id: 'john', name: "John Smith", age: 20},
+  ann: {id: 'ann', name: "Ann Smith", age: 24},
+  pete: {id: 'pete', name: "Pete Peterson", age: 31},
+}
+
+*/
