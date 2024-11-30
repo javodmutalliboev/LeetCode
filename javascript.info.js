@@ -412,3 +412,57 @@ let ladder = {
 
 ladder.up().up().down().showStep().down().showStep();
 */
+
+/*
+const obj = {};
+
+function A() {
+  // this.name = "A";
+  return obj;
+}
+
+function B() {
+  // this.name = "A";
+  return obj;
+}
+
+let a = new A();
+let b = new B();
+
+alert(a == b);
+*/
+
+/*
+function Calculator() {
+  this.read = () => {
+    this.a = +prompt("a?", "");
+    this.b = +prompt("b?", "");
+  };
+  this.sum = () => this.a + this.b;
+  this.mul = () => this.a * this.b;
+}
+
+let calculator = new Calculator();
+calculator.read();
+
+alert("Sum=" + calculator.sum());
+alert("Mul=" + calculator.mul());
+*/
+
+/*
+/**
+ * @param {number} startingValue
+function Accumulator(startingValue) {
+  this.value = startingValue;
+  this.read = () => {
+    this.value += +prompt("How much to add?", 0);
+  };
+}
+
+let accumulator = new Accumulator(1);
+
+accumulator.read();
+accumulator.read();
+
+alert(accumulator.value);
+*/
