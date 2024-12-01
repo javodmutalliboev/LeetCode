@@ -1112,3 +1112,45 @@ messages.toString = function () {
 alert(messages);
 
 */
+
+/*
+let salaries = {
+  John: 100,
+  Pete: 300,
+  Mary: 250,
+};
+
+alert(sumSalaries(salaries)); // 650
+
+/**
+ *
+ * @param {object} salaries
+ * @returns {number}
+ 
+function sumSalaries(salaries) {
+  let sum = 0;
+  // for (const value of Object.values(salaries)) {
+  //   sum += value;
+  // }
+  sum = Object.values(salaries).reduce((prev, cur) => prev + cur, 0);
+  return sum;
+}
+*/
+
+/*
+let user = {
+  name: "John",
+  age: 30,
+};
+
+alert(count(user)); // 2
+
+/**
+ *
+ * @param {object} user
+ * @returns {number}
+
+function count(user) {
+  return Object.keys(user).length;
+}
+*/
