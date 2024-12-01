@@ -1154,3 +1154,50 @@ function count(user) {
   return Object.keys(user).length;
 }
 */
+
+/*
+let user = {
+  name: "John",
+  years: 30,
+};
+
+let { name, years: age, isAdmin = false } = user;
+
+alert(name); // John
+alert(age); // 30
+alert(isAdmin); // false
+*/
+
+/*
+
+
+let salaries = {
+  John: 100,
+  Pete: 300,
+  Mary: 250,
+};
+
+/**
+ *
+ * @param {object} salaries
+ * @returns {string}
+
+function topSalary(salaries) {
+  if (Object.keys(salaries).length === 0) {
+    return null;
+  }
+
+  let maxSalaryOwner = "";
+  let maxSalary = 0;
+  for (const key in salaries) {
+    if (maxSalary < salaries[key]) {
+      maxSalary = salaries[key];
+      maxSalaryOwner = key;
+    }
+  }
+  return maxSalaryOwner;
+}
+
+alert(topSalary(salaries));
+
+*/
